@@ -1,8 +1,9 @@
-let mongoose = require("mongoose");
-var host = "mongodb://localhost:27017"
+const mongoose = require('mongoose')
+require('dotenv').config()
+const host = process.env.host
 
 mongoose.connect(host, {
-    'userNewUrlParser' : true
-});
+    'userNewUrlParser': true
+})
 
-mongoose.set('useCreateIndex', true);
+mongoose.set('useCreateIndex', true)
